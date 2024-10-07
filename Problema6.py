@@ -20,9 +20,9 @@ class Catalogo:
         return [producto for producto in self.productos if producto.precio <= precio_max]
 
 if __name__ == '__main__':
-    prod1 = Producto("Aceite", 2023, 25.50)
-    prod2 = Producto("Filtro de Aire", 2021, 45.00)
-    prod3 = Producto("Bujía", 2023, 15.00)
+    prod1 = Producto("Aceite", 2024, 25.50)
+    prod2 = Producto("Filtro de Aire", 2023, 45.00)
+    prod3 = Producto("Pastillas", 2023, 15.00)
 
     catalogo = Catalogo()
     catalogo.agregar_producto(prod1)

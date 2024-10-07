@@ -1,26 +1,30 @@
-def get_fuel_percentage():
+def Pfraccion():
     while True:
         try:
-            fraction = input("Ingrese la fracción X/Y: ")
-            x, y = fraction.split('/')
+            fraccion = input("Ingrese una fracción en formato X/Y: ")
+            x, y = fraccion.split('/')
             x = int(x)
             y = int(y)
+            
             if y == 0:
-                raise ZeroDivisionError
+                raise ZeroDivisionError("El denominador no puede ser 0.")
             if x > y:
-                raise ValueError("X no puede ser mayor que Y.")
-            percentage = (x / y) * 100
-            if percentage <= 1:
+                raise ValueError("El numerador no puede ser mayor que el denominador.")
+            
+            porcentaje = round((x / y) * 100)
+            
+            if porcentaje <= 1:
                 return "E"
-            elif percentage >= 99:
+            elif porcentaje >= 99:
                 return "F"
             else:
-                return f"{round(percentage)}%"
+                return f"{porcentaje}%"
         
         except ValueError:
-            print("Entrada no válida. Asegúrese de ingresar números enteros y que X sea menor o igual a Y.")
+            print("Error: Ingrese una fracción válida con números enteros.")
         except ZeroDivisionError:
-            print("Error: Y no puede ser cero.")
+            print("Error: No se puede dividir entre 0.")
 
-if __name__ == '__main__':
-    print(get_fuel_percentage())
+if __name__ == "__main__":
+    result = Pfraccion()
+    print(result)

@@ -12,7 +12,7 @@ class Alumno:
         self.nota = nota
 
 if __name__ == '__main__':
-    estudiante = Alumno("Grover", "A1234")
-    estudiante.setAge(20)
-    estudiante.setNota(85)
+    estudiante = Alumno("Grover", "2003")
+    estudiante.setAge(22)
+    estudiante.setNota(18)
     estudiante.display()

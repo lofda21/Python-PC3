@@ -10,7 +10,7 @@ class Cuadrado(Rectangulo):
         super().__init__(lado, lado)
 
 if __name__ == '__main__':
-    rectangulo = Rectangulo(4, 8)
+    rectangulo = Rectangulo(21, 12)
     print(f"Área del rectángulo: {rectangulo.calcular_area()}")
-    cuadrado = Cuadrado(5)
+    cuadrado = Cuadrado(10)
     print(f"Área del cuadrado: {cuadrado.calcular_area()}")
