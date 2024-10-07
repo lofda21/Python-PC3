@@ -1,9 +1,8 @@
 def get_grades():
     while True:
-        try:
-            # Solicitar las calificaciones al usuario
+        try:21,56,1
+        
             grades_input = input("Ingrese las calificaciones separadas por comas: ")
-            # Dividir la cadena en calificaciones y convertir cada una en entero
             grades_list = [int(grade.strip()) for grade in grades_input.split(',')]
             return grades_list
         except ValueError:

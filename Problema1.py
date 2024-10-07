@@ -1,23 +1,15 @@
 def get_fuel_percentage():
     while True:
         try:
-            # Solicitar fracción al usuario
             fraction = input("Ingrese la fracción X/Y: ")
-            # Dividir la fracción en X e Y
             x, y = fraction.split('/')
             x = int(x)
             y = int(y)
-
-            # Verificar que Y no sea cero y que X no sea mayor que Y
             if y == 0:
                 raise ZeroDivisionError
             if x > y:
                 raise ValueError("X no puede ser mayor que Y.")
-            
-            # Calcular el porcentaje
             percentage = (x / y) * 100
-
-            # Retornar resultado basado en el porcentaje
             if percentage <= 1:
                 return "E"
             elif percentage >= 99:
